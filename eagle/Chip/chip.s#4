@@ -7946,7 +7946,6 @@ http://www.ee.siue.edu/~alozows/library/datasheets/BFR96.pdf</description>
 <sheets>
 <sheet>
 <plain>
-<text x="238.76" y="68.58" size="1.778" layer="96">pot and other connections</text>
 </plain>
 <instances>
 <instance part="Y1" gate="G$1" x="58.42" y="60.96" smashed="yes" rot="R90">
