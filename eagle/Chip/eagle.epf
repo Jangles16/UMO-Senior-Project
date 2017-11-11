@@ -416,7 +416,7 @@ UsedLibrary="C:/EAGLE 8.4.0/lbr/ece.lbr"
 [Win_1]
 Type="Control Panel"
 Loc="0 0 1199 639"
-State=2
+State=0
 Number=0
 
 [Desktop]
