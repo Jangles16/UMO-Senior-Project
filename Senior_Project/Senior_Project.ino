@@ -1,10 +1,13 @@
 #include <FaBoLCD_PCF8574.h>
+#include <avr/io.h>
+#include <avr/interrupt.h>
 
 #include <Key.h>
 #include <Keypad.h>
 
 #define ALARM_PIN     12    //pin 18 on chip, used to control alarm speaker and led
-#define SETPOINT_PIN  13    //pin 19 on chip, used 
+#define SETPOINT_PIN  13    //pin 19 on chip, used control setpoint led
+#define ZERO_SENSE    2     //pin 4 on chip, used as external interrupt pin to capture zero crossing event
 
 
 const byte ROWS = 4; // Four rows
@@ -27,8 +30,13 @@ byte colPins[COLS] = { 9, 10, 11 };
 Keypad kpd = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 FaBoLCD_PCF8574 lcd;
 
+volatile byte state = LOW;
+
 void setup() {
   pinMode(ALARM_PIN, OUTPUT);
+  pinMode(SETPOINT_PIN, OUTPUT);
+  pinMode(ZERO_SENSE, INPUT);
+  attachInterrupt(0, crossing, RISING);  //cureently working
   
   // set up the LCD's number of columns and rows:
   lcd.begin(16, 2);
@@ -39,7 +47,8 @@ void setup() {
 }
 
 void loop() {
-
+ // interrupts();
+  //digitalWrite(ALARM_PIN, state);  
   char key = kpd.getKey();
   if(key){  // Check for a valid key.
     
@@ -64,7 +73,12 @@ void loop() {
       
     }
   }
-  
-
-
 }
+
+//ISR for zero crossing signal (currently working nedd 1M pull-down on pin 4 of chip
+void crossing() {
+  state = !state; 
+  digitalWrite(ALARM_PIN, state); 
+}
+
+
