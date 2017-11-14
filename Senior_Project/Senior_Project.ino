@@ -18,7 +18,7 @@
                             //ensures we get the main terminals to stay triggered
 #define HOT_PIN       4     //probably need to change pin (4 on chip currently)
 
-//may need to modify these
+//may need to modify these, check AVcc level and recalculate
 //used to convert adc reading into degree F                            
 #define TEMP_OFFSET   28.2    
 #define TEMP_SLOPE    .4545454545
@@ -47,6 +47,7 @@ volatile byte state = LOW;
 int temperature = 0;
 int setpoint = 0;
 byte hot_led_en = 0;
+unsigned long alarm_timer;
 
 
 void setup() {
@@ -96,9 +97,9 @@ void loop() {
 //   hot_led_en = 0;
 //}
 
-  if ((millis() - alarm_timer) >= 30000) {    //30000 is 30 seconds, alarm after that
-    digitalWrite(ALARM_PIN, OUTPUT);
-  }
+//  if ((millis() - alarm_timer) >= 30000 && hot_led_en == 1) {    //30000 is 30 seconds, alarm after that
+//    digitalWrite(ALARM_PIN, OUTPUT);
+//  }
     
   
 
