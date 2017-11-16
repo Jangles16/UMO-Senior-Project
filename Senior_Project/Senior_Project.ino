@@ -25,7 +25,7 @@
 //may need to modify these, check AVcc level and recalculate, also check where temp sense gets +5V
 //used to convert adc reading into degree F                            
 #define TEMP_OFFSET   28.2    
-#define TEMP_SLOPE    .4545454545
+#define TEMP_SLOPE    .445  //.4545454545
 
 const byte ROWS = 4; // Four rows
 const byte COLS = 3; // Three columns
@@ -59,7 +59,7 @@ long print_cnt = 50000;
 int key_temp = 0;
 boolean zero_state = false; //if we need to care about zero sensing or not
 //boolean on_state = false;    //if we are a state to care about alarms
-int windowsize = 517; //518 - 1, practically turns triac off (see ISRs below), same as 518 and get full wave again 
+int windowsize = 516; //518 - 2, practically turns triac off (see ISRs below), same as 518 and get full wave again 
 
 PID myPID(&temperature, &pid_output, &setpoint, KP, KI, KD, REVERSE);
 
@@ -94,11 +94,11 @@ void setup() {
   lcd.print("SETp = ");
 
   //setup PID limits (
-  myPID.SetOutputLimits(3, windowsize);
+  myPID.SetOutputLimits(2, windowsize);
   myPID.SetMode(AUTOMATIC);
 
   //test variables
-  temperature = 200;
+  //temperature = 200;
 
   
 }
@@ -110,8 +110,8 @@ void setup() {
 void loop() {
   
   
-  //temperature = (TEMP_SLOPE * analogRead(A0)) + TEMP_OFFSET;  //Seems to be pretty close, will need to double check again
-  if (print_cnt>=50000) {
+  temperature = (TEMP_SLOPE * analogRead(A0)) + TEMP_OFFSET;  //Seems to be pretty close, will need to double check again
+  if (print_cnt>=10000) {
     lcd.setCursor(7,0);
     lcd.print("   ");
     lcd.setCursor(7,0); 
