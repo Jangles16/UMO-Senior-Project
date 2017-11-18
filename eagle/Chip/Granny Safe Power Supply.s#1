@@ -11950,8 +11950,7 @@ Source: http://www.national.com/ds/LM/LM2596.pdf</description>
 <instance part="R16" gate="G$1" x="-74.93" y="144.78" rot="R90"/>
 <instance part="R17" gate="G$1" x="-154.94" y="184.15" rot="MR0"/>
 <instance part="Q1" gate="G$1" x="-124.46" y="179.07" smashed="yes" rot="MR0">
-<attribute name="NAME" x="-127" y="179.07" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="-127" y="176.784" size="1.778" layer="96" rot="MR0"/>
+<attribute name="NAME" x="-128.27" y="176.53" size="1.778" layer="95" rot="MR0"/>
 </instance>
 <instance part="R20" gate="G$1" x="-116.84" y="179.07" smashed="yes" rot="MR0">
 <attribute name="NAME" x="-118.11" y="182.6514" size="1.778" layer="95" rot="MR180"/>
