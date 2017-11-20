@@ -23021,10 +23021,8 @@ Source: http://www.national.com/ds/LM/LM2596.pdf</description>
 </net>
 <net name="LINE" class="0">
 <segment>
-<pinref part="XFMR1" gate="1" pin="2"/>
 <wire x1="259.08" y1="190.246" x2="257.302" y2="190.246" width="0.1524" layer="91"/>
 <wire x1="257.302" y1="190.246" x2="257.302" y2="184.404" width="0.1524" layer="91"/>
-<wire x1="257.302" y1="184.404" x2="255.778" y2="184.404" width="0.1524" layer="91"/>
 <label x="259.08" y="190.246" size="1.778" layer="95" rot="MR180"/>
 </segment>
 <segment>
@@ -23045,10 +23043,8 @@ Source: http://www.national.com/ds/LM/LM2596.pdf</description>
 </net>
 <net name="NEUT" class="0">
 <segment>
-<pinref part="XFMR1" gate="1" pin="1"/>
 <wire x1="259.08" y1="192.786" x2="257.302" y2="192.786" width="0.1524" layer="91"/>
 <wire x1="257.302" y1="192.786" x2="257.302" y2="197.104" width="0.1524" layer="91"/>
-<wire x1="257.302" y1="197.104" x2="255.778" y2="197.104" width="0.1524" layer="91"/>
 <label x="259.08" y="193.802" size="1.778" layer="95" rot="MR180"/>
 </segment>
 <segment>
@@ -23111,19 +23107,11 @@ Source: http://www.national.com/ds/LM/LM2596.pdf</description>
 <net name="N$37" class="0">
 <segment>
 <pinref part="F1" gate="1" pin="1"/>
-<pinref part="XFMR1" gate="1" pin="4"/>
-<wire x1="237.236" y1="189.484" x2="243.078" y2="189.484" width="0.1524" layer="91"/>
-<pinref part="XFMR1" gate="1" pin="6"/>
 <wire x1="237.236" y1="189.484" x2="237.236" y2="197.104" width="0.1524" layer="91"/>
-<wire x1="237.236" y1="197.104" x2="243.078" y2="197.104" width="0.1524" layer="91"/>
-<junction x="237.236" y="189.484"/>
 </segment>
 </net>
 <net name="N$41" class="0">
 <segment>
-<pinref part="XFMR1" gate="1" pin="5"/>
-<wire x1="243.078" y1="192.024" x2="242.316" y2="192.024" width="0.1524" layer="91"/>
-<wire x1="242.316" y1="192.024" x2="242.316" y2="184.404" width="0.1524" layer="91"/>
 <pinref part="XFMR1" gate="1" pin="3"/>
 <wire x1="242.316" y1="184.404" x2="243.078" y2="184.404" width="0.1524" layer="91"/>
 <pinref part="D4" gate="G$1" pin="A"/>
@@ -23133,7 +23121,6 @@ Source: http://www.national.com/ds/LM/LM2596.pdf</description>
 <wire x1="242.316" y1="163.068" x2="244.602" y2="163.068" width="0.1524" layer="91"/>
 <wire x1="237.236" y1="163.576" x2="237.236" y2="163.068" width="0.1524" layer="91"/>
 <wire x1="242.316" y1="184.404" x2="242.316" y2="163.068" width="0.1524" layer="91"/>
-<junction x="242.316" y="184.404"/>
 <junction x="242.316" y="163.068"/>
 </segment>
 </net>
@@ -23207,6 +23194,12 @@ Source: http://www.national.com/ds/LM/LM2596.pdf</description>
 <wire x1="39.116" y1="128.27" x2="48.006" y2="128.27" width="0.1524" layer="91"/>
 <wire x1="39.116" y1="127" x2="39.116" y2="128.27" width="0.1524" layer="91"/>
 <junction x="39.116" y="128.27"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="XFMR1" gate="1" pin="5"/>
+<wire x1="243.078" y1="192.024" x2="242.316" y2="192.024" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
