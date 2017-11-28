@@ -2,26 +2,24 @@ EAGLE AutoRouter Statistics:
 
 Job           : C:/Users/Josh Andrews/Desktop/ECE 400/eagle/Chip/Granny Safe.brd
 
-Start at      : 11:02:08 (11/19/2017)
-End at        : 11:03:59 (11/19/2017)
-Elapsed time  : 00:01:23
+Start at      : 11:37:12 (11/22/2017)
+End at        : 11:37:24 (11/22/2017)
+Elapsed time  : 00:00:04
 
-Signals       :    59   RoutingGrid: 12.5 mil  Layers: 2
-Connections   :   170   predefined:  0 ( 0 Vias )
+Signals       :    61   RoutingGrid: 25 mil  Layers: 2
+Connections   :   171   predefined:  101 ( 96 Vias )
 
-Router memory :   2134080
+Router memory :   391040
 
-Job has been interrupted!
+Passname          :    Busses     Route Optimize1 Optimize2 Optimize3 Optimize4
 
-Passname          :     Route Optimize1 Optimize2 Optimize3 Optimize4
+Time per pass     :  00:00:00  00:00:01  00:00:01  00:00:00  00:00:01  00:00:01
+Number of Ripups  :         0         1         0         0         0         0
+max. Level        :         0         1         0         0         0         0
+max. Total        :         0         2         0         0         0         0
 
-Time per pass     :  00:00:22  00:00:14  00:00:15  00:00:15  00:00:17
-Number of Ripups  :        26         0         0         0         0
-max. Level        :         2         0         0         0         0
-max. Total        :        19         0         0         0         0
-
-Routed            :       170       170       170       170       170
-Vias              :       262       191       168       150       139
-Resolution        :   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %
+Routed            :         4        70        70        70        70        70
+Vias              :         0        28        21        21        21        21
+Resolution        :    61.4 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %
 
 Final             : 
