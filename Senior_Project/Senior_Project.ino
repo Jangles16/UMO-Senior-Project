@@ -38,10 +38,10 @@ char keys[ROWS][COLS] = {
   {'*','0','#'}
 };
 // Connect keypad ROW0, ROW1, ROW2 and ROW3 to these Arduino pins (11-14 on chip).  (will probably need to change these pins)
-byte rowPins[ROWS] = { 5, 6, 7, 8 };    
+byte rowPins[ROWS] = { 6, 11, 10, 8 };    
 
 // Connect keypad COL0, COL1 and COL2 to these Arduino pins (15-17 on chip).
-byte colPins[COLS] = { 9, 10, 11 }; 
+byte colPins[COLS] = { 7, 5, 9 }; 
 
 //define the keypad using info above
 Keypad kpd = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
@@ -225,6 +225,7 @@ void loop() {
           lcd.setCursor(7,1);
           lcd.print((int)setpoint/10);
           break;
+          //maybe include a timeout feature if 3 # not entered fast enough
         }
         else if (key_temp == 2) {
           setpoint = setpoint + (key-'0');
@@ -258,6 +259,7 @@ void loop() {
 
 //ISR for zero crossing signal (currently working need 1M pull-down on pin 4 of chip), trying with interal pullup and no pulldown next (try again)
 //Code modified from arduino ac phase control tutorial
+//might want to put in code to stop signal if full off, always on if full on
 void zero_crossing() {
   if (zero_state) {
     TCCR1B=0x04;                  //start timer with divide by 256 input
