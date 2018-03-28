@@ -21946,7 +21946,7 @@ Source: http://www.national.com/ds/LM/LM2596.pdf</description>
 <part name="L2" library="ece" deviceset="INDUCTOR" device=""/>
 <part name="SUPPLY12" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
 <part name="SUPPLY14" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
-<part name="U$1" library="ece" deviceset="SCREW-4" device=""/>
+<part name="J10" library="ece" deviceset="SCREW-4" device=""/>
 <part name="J7" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:38039/1"/>
 <part name="J11" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:38039/1"/>
 <part name="J12" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:38039/1"/>
@@ -22269,7 +22269,9 @@ Source: http://www.national.com/ds/LM/LM2596.pdf</description>
 </instance>
 <instance part="SUPPLY12" gate="G$1" x="192.786" y="140.208"/>
 <instance part="SUPPLY14" gate="G$1" x="175.768" y="101.854"/>
-<instance part="U$1" gate="&gt;NAME" x="259.588" y="127.508" rot="R180"/>
+<instance part="J10" gate="&gt;NAME" x="259.588" y="127.508" smashed="yes" rot="R180">
+<attribute name="NAME" x="264.668" y="119.38" size="1.778" layer="95" font="vector" rot="R180"/>
+</instance>
 <instance part="J7" gate="G$1" x="43.18" y="25.4" rot="R180"/>
 <instance part="J11" gate="G$1" x="78.74" y="25.4" rot="R180"/>
 <instance part="J12" gate="G$1" x="239.268" y="55.626" rot="R180"/>
@@ -22974,11 +22976,11 @@ Source: http://www.national.com/ds/LM/LM2596.pdf</description>
 <wire x1="221.488" y1="91.44" x2="221.488" y2="85.852" width="0.1524" layer="91"/>
 <label x="222.758" y="87.884" size="1.778" layer="95" rot="MR180"/>
 <pinref part="T1" gate="G$1" pin="A1"/>
-<pinref part="U$1" gate="&gt;NAME" pin="4"/>
-<wire x1="254.508" y1="122.428" x2="250.698" y2="122.428" width="0.1524" layer="91"/>
-<label x="250.698" y="122.428" size="1.778" layer="95"/>
-<wire x1="221.488" y1="85.852" x2="250.698" y2="85.852" width="0.1524" layer="91"/>
-<wire x1="250.698" y1="85.852" x2="250.698" y2="122.428" width="0.1524" layer="91"/>
+<wire x1="221.488" y1="85.852" x2="246.888" y2="85.852" width="0.1524" layer="91"/>
+<pinref part="J10" gate="&gt;NAME" pin="1"/>
+<wire x1="254.508" y1="130.048" x2="246.888" y2="130.048" width="0.1524" layer="91"/>
+<wire x1="246.888" y1="130.048" x2="246.888" y2="85.852" width="0.1524" layer="91"/>
+<label x="250.698" y="130.048" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$35" class="0">
@@ -23026,19 +23028,20 @@ Source: http://www.national.com/ds/LM/LM2596.pdf</description>
 <pinref part="XFMR1" gate="1" pin="1"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="&gt;NAME" pin="1"/>
-<label x="250.698" y="130.048" size="1.778" layer="95"/>
 <pinref part="R20" gate="G$1" pin="1"/>
 <wire x1="228.346" y1="130.048" x2="232.918" y2="130.048" width="0.1524" layer="91"/>
 <pinref part="T1" gate="G$1" pin="A2"/>
-<wire x1="232.918" y1="130.048" x2="254.508" y2="130.048" width="0.1524" layer="91"/>
 <wire x1="206.248" y1="99.06" x2="221.488" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="206.248" y1="99.06" x2="206.248" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="U3" gate="G$1" pin="6"/>
 <wire x1="221.488" y1="99.06" x2="232.918" y2="99.06" width="0.1524" layer="91"/>
 <junction x="221.488" y="99.06"/>
-<wire x1="232.918" y1="99.06" x2="232.918" y2="130.048" width="0.1524" layer="91"/>
-<junction x="232.918" y="130.048"/>
+<wire x1="232.918" y1="99.06" x2="232.918" y2="122.428" width="0.1524" layer="91"/>
+<pinref part="J10" gate="&gt;NAME" pin="4"/>
+<wire x1="232.918" y1="122.428" x2="232.918" y2="130.048" width="0.1524" layer="91"/>
+<wire x1="254.508" y1="122.428" x2="232.918" y2="122.428" width="0.1524" layer="91"/>
+<junction x="232.918" y="122.428"/>
+<label x="250.698" y="122.428" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="NEUT" class="0">
@@ -23049,9 +23052,9 @@ Source: http://www.national.com/ds/LM/LM2596.pdf</description>
 <pinref part="XFMR1" gate="1" pin="4"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="&gt;NAME" pin="3"/>
+<pinref part="J10" gate="&gt;NAME" pin="3"/>
 <label x="250.698" y="124.968" size="1.778" layer="95"/>
-<pinref part="U$1" gate="&gt;NAME" pin="2"/>
+<pinref part="J10" gate="&gt;NAME" pin="2"/>
 <label x="250.698" y="127.508" size="1.778" layer="95"/>
 <pinref part="U2" gate="G$1" pin="AC2"/>
 <wire x1="218.186" y1="124.968" x2="240.284" y2="124.968" width="0.1524" layer="91"/>

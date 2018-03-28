@@ -21459,10 +21459,10 @@ TRIAC that is triggered optically.</description>
 <wire x1="1.7272" y1="-1.016" x2="1.6256" y2="-1.016" width="0.254" layer="94"/>
 <text x="-7.62" y="-5.334" size="1.778" layer="96" font="vector" align="top-left">MOC3051</text>
 <text x="-7.62" y="5.334" size="1.778" layer="95" font="vector">&gt;NAME</text>
-<pin name="6" x="-10.16" y="2.54" visible="pad" length="short"/>
-<pin name="4" x="-10.16" y="-2.54" visible="pad" length="short"/>
-<pin name="2" x="10.16" y="-2.54" visible="pad" length="short" rot="R180"/>
-<pin name="1" x="10.16" y="2.54" visible="pad" length="short" rot="R180"/>
+<pin name="1" x="-10.16" y="2.54" visible="pad" length="short"/>
+<pin name="2" x="-10.16" y="-2.54" visible="pad" length="short"/>
+<pin name="4" x="10.16" y="-2.54" visible="pad" length="short" rot="R180"/>
+<pin name="6" x="10.16" y="2.54" visible="pad" length="short" rot="R180"/>
 <polygon width="0.254" layer="94">
 <vertex x="-6.35" y="1.016"/>
 <vertex x="-5.08" y="-1.016"/>
@@ -22099,6 +22099,19 @@ STAND-OFF</description>
 <text x="198.628" y="7.112" size="2.54" layer="94">All Inclusive</text>
 <text x="266.7" y="7.366" size="2.54" layer="94">C</text>
 <text x="199.898" y="166.624" size="1.778" layer="96">LM2576</text>
+<text x="38.354" y="29.21" size="1.778" layer="96">SET JMP</text>
+<text x="73.914" y="29.21" size="1.778" layer="96">TIM JMP</text>
+<text x="119.38" y="33.274" size="1.778" layer="96">ALR JMP</text>
+<text x="195.072" y="57.912" size="1.778" layer="96">GND TP</text>
+<text x="195.072" y="52.578" size="1.778" layer="96">GND TP</text>
+<text x="234.95" y="59.69" size="1.778" layer="96">ON JMP</text>
+<text x="257.048" y="134.366" size="1.778" layer="96">PWR JMP</text>
+<text x="160.782" y="186.69" size="1.778" layer="96">S1</text>
+<text x="108.458" y="192.024" size="1.778" layer="96">ADC TP</text>
+<text x="135.636" y="118.872" size="1.778" layer="96">ZERO TP</text>
+<text x="166.116" y="47.244" size="1.778" layer="96">SUP JMP</text>
+<text x="30.226" y="154.686" size="1.778" layer="96">RTD JMP</text>
+<text x="56.896" y="188.976" size="1.778" layer="96">MCP6004</text>
 </plain>
 <instances>
 <instance part="XTAL" gate="G$1" x="35.56" y="88.9" smashed="yes" rot="R90">
@@ -22363,8 +22376,8 @@ STAND-OFF</description>
 <attribute name="VALUE" x="171.45" y="175.514" size="1.778" layer="96" rot="MR270" align="top-left"/>
 </instance>
 <instance part="T1" gate="G$1" x="221.488" y="93.98"/>
-<instance part="U3" gate="G$1" x="196.088" y="93.98" smashed="yes" rot="MR0">
-<attribute name="NAME" x="203.708" y="99.314" size="1.778" layer="95" font="vector" rot="MR0"/>
+<instance part="U3" gate="G$1" x="196.088" y="93.98" smashed="yes">
+<attribute name="NAME" x="188.468" y="99.314" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="R26" gate="G$1" x="165.608" y="174.244" smashed="yes" rot="MR90">
 <attribute name="NAME" x="167.132" y="174.244" size="1.778" layer="95" rot="MR90" align="bottom-center"/>
@@ -23080,13 +23093,6 @@ STAND-OFF</description>
 <pinref part="R20" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="N$34" class="0">
-<segment>
-<pinref part="Q4" gate="G$1" pin="C"/>
-<wire x1="185.928" y1="91.44" x2="183.388" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="U3" gate="G$1" pin="2"/>
-</segment>
-</net>
 <net name="PWR" class="0">
 <segment>
 <wire x1="221.488" y1="91.44" x2="221.488" y2="85.852" width="0.1524" layer="91"/>
@@ -23150,8 +23156,6 @@ STAND-OFF</description>
 <wire x1="228.346" y1="130.048" x2="232.918" y2="130.048" width="0.1524" layer="91"/>
 <pinref part="T1" gate="G$1" pin="A2"/>
 <wire x1="206.248" y1="99.06" x2="221.488" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="206.248" y1="99.06" x2="206.248" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="U3" gate="G$1" pin="6"/>
 <wire x1="221.488" y1="99.06" x2="232.918" y2="99.06" width="0.1524" layer="91"/>
 <junction x="221.488" y="99.06"/>
 <wire x1="232.918" y1="99.06" x2="232.918" y2="122.428" width="0.1524" layer="91"/>
@@ -23160,6 +23164,8 @@ STAND-OFF</description>
 <wire x1="254.508" y1="122.428" x2="232.918" y2="122.428" width="0.1524" layer="91"/>
 <junction x="232.918" y="122.428"/>
 <label x="250.698" y="122.428" size="1.778" layer="95"/>
+<pinref part="U3" gate="G$1" pin="6"/>
+<wire x1="206.248" y1="96.52" x2="206.248" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="NEUT" class="0">
@@ -23187,18 +23193,6 @@ STAND-OFF</description>
 <pinref part="R24" gate="G$1" pin="2"/>
 <wire x1="216.408" y1="93.98" x2="216.408" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="T1" gate="G$1" pin="G"/>
-</segment>
-</net>
-<net name="N$31" class="0">
-<segment>
-<pinref part="R22" gate="G$1" pin="2"/>
-<pinref part="U3" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="N$32" class="0">
-<segment>
-<pinref part="R24" gate="G$1" pin="1"/>
-<pinref part="U3" gate="G$1" pin="4"/>
 </segment>
 </net>
 <net name="N$33" class="0">
@@ -23333,6 +23327,25 @@ STAND-OFF</description>
 <pinref part="J8" gate="G$1" pin="1"/>
 <wire x1="162.306" y1="194.564" x2="162.306" y2="198.628" width="0.1524" layer="91"/>
 <wire x1="162.306" y1="198.628" x2="169.926" y2="198.628" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$31" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="4"/>
+<pinref part="R24" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$32" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="1"/>
+<pinref part="R22" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$34" class="0">
+<segment>
+<pinref part="Q4" gate="G$1" pin="C"/>
+<pinref part="U3" gate="G$1" pin="2"/>
+<wire x1="183.388" y1="91.44" x2="185.928" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
