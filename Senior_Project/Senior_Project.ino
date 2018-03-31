@@ -63,7 +63,7 @@ boolean set_state = false;              // used as flag for setpoint entered or 
 boolean hot_led_state = false;          // used as flag for temp > 120F 
 unsigned long alarm_timer = 0xFFFFFFFF; // used to store alarm time
 const long alarm_period = 1;            //1ms on/off time, 500Hz, closest can get to 1kHz using millis, Blink Without Delay Arduino
-long print_cnt = 50000;                 //used to slow down writing to lcd
+unsigned int print_cnt = 50000;                 //used to slow down writing to lcd
 int key_temp = 0;                       //key press counter
 boolean zero_state = false;             //flag to signal if we are in state where we care about zero-crossing (pid and hotplate control)
 //boolean on_state = false;             //if we are a state to care about alarms
@@ -236,7 +236,7 @@ void loop() {
 //Code modified from arduino ac phase control tutorial
 
 void zero_crossing() {
-  if (zero_state && OCR1A <498) { //zero sense enabled and hotplate not in full off condition  
+  if (zero_state) { //zero sense enabled and hotplate not in full off condition  
     TCCR1B=0x04;                  //start timer 1 with divide by 256 input
     TCNT1 = 0;                    //reset timer 1 - count from zero
   }   
@@ -245,7 +245,7 @@ void zero_crossing() {
 ISR(TIMER1_COMPA_vect){                 //comparator match interrupt
   if (zero_state) {                     //zero sense is enable
     digitalWrite(GATE_PIN, HIGH);       //set TRIAC gate to high
-    TCNT1 = 65536 - (500 + OCR1A);      //trigger pulse width, will be full half wave - delay
+    TCNT1 = 65536 + (-498 + OCR1A);      //trigger pulse width, will be full half wave - delay
   }                                     //bigger than 500 and starts skipping some half waves
                                         //given the rise/fall of zero-cross, 500 ~ half wave
 }

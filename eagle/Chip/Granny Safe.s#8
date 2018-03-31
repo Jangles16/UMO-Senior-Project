@@ -21975,7 +21975,7 @@ STAND-OFF</description>
 <part name="SUPPLY7" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
 <part name="RTD" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="10KOHM" device="-HORIZ-1/4W-1%" package3d_urn="urn:adsk.eagle:package:39658/1" value=""/>
 <part name="SUPPLY8" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
-<part name="LED1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="5MM"/>
+<part name="ALR_LED" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="5MM"/>
 <part name="R18" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0603" value="150"/>
 <part name="Q3" library="SparkFun-DiscreteSemi" library_urn="urn:adsk.eagle:library:514" deviceset="TRANS_NPN" device="-MMBTA42" package3d_urn="urn:adsk.eagle:package:38446/1" value=""/>
 <part name="SUPPLY11" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
@@ -22004,8 +22004,8 @@ STAND-OFF</description>
 <part name="GND4" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="R14" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0603" value="150"/>
 <part name="R15" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0603" value="150"/>
-<part name="LED3" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="5MM"/>
-<part name="LED4" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="5MM"/>
+<part name="SET_LED" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="5MM"/>
+<part name="TIM_LED" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="5MM"/>
 <part name="SUPPLY4" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
 <part name="SUPPLY9" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
 <part name="R16" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:26057/1" value="1M"/>
@@ -22061,7 +22061,7 @@ STAND-OFF</description>
 <part name="SUPPLY15" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
 <part name="GND11" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="R28" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0603" value="150"/>
-<part name="LED5" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="5MM"/>
+<part name="ON_LED" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="5MM"/>
 <part name="GND12" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY13" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
 <part name="XFMR1" library="ece" deviceset="EE20-2" device=""/>
@@ -22191,7 +22191,7 @@ STAND-OFF</description>
 <instance part="SUPPLY7" gate="G$1" x="55.88" y="200.66"/>
 <instance part="RTD" gate="G$1" x="12.7" y="165.1" rot="MR0"/>
 <instance part="SUPPLY8" gate="G$1" x="86.36" y="167.64"/>
-<instance part="LED1" gate="G$1" x="109.22" y="25.4" smashed="yes">
+<instance part="ALR_LED" gate="G$1" x="109.22" y="25.4" smashed="yes">
 <attribute name="NAME" x="106.172" y="26.416" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="114.935" y="20.828" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -22263,11 +22263,11 @@ STAND-OFF</description>
 <attribute name="NAME" x="26.67" y="36.6014" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="26.67" y="33.782" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="LED3" gate="G$1" x="30.48" y="25.4" smashed="yes">
+<instance part="SET_LED" gate="G$1" x="30.48" y="25.4" smashed="yes">
 <attribute name="NAME" x="27.432" y="26.416" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="36.195" y="20.828" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="LED4" gate="G$1" x="66.04" y="25.4" smashed="yes">
+<instance part="TIM_LED" gate="G$1" x="66.04" y="25.4" smashed="yes">
 <attribute name="NAME" x="62.992" y="26.416" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="71.755" y="20.828" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -22404,8 +22404,8 @@ STAND-OFF</description>
 <attribute name="NAME" x="223.774" y="65.8114" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="223.52" y="63.246" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="LED5" gate="G$1" x="218.186" y="55.626" smashed="yes">
-<attribute name="NAME" x="225.806" y="55.118" size="1.778" layer="95" rot="R180"/>
+<instance part="ON_LED" gate="G$1" x="218.186" y="55.626" smashed="yes">
+<attribute name="NAME" x="229.108" y="55.118" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="223.901" y="51.054" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND12" gate="1" x="218.186" y="48.006"/>
@@ -22601,7 +22601,7 @@ STAND-OFF</description>
 <wire x1="165.608" y1="191.008" x2="165.608" y2="188.976" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="LED5" gate="G$1" pin="C"/>
+<pinref part="ON_LED" gate="G$1" pin="C"/>
 <pinref part="GND12" gate="1" pin="GND"/>
 <pinref part="J12" gate="G$1" pin="2"/>
 <wire x1="231.648" y1="53.086" x2="231.648" y2="50.546" width="0.1524" layer="91"/>
@@ -22810,7 +22810,7 @@ STAND-OFF</description>
 </net>
 <net name="N$39" class="0">
 <segment>
-<pinref part="LED1" gate="G$1" pin="A"/>
+<pinref part="ALR_LED" gate="G$1" pin="A"/>
 <pinref part="R18" gate="G$1" pin="1"/>
 <wire x1="109.22" y1="27.94" x2="115.316" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="115.316" y1="27.94" x2="115.316" y2="32.004" width="0.1524" layer="91"/>
@@ -22921,7 +22921,7 @@ STAND-OFF</description>
 <net name="N$17" class="0">
 <segment>
 <pinref part="R15" gate="G$1" pin="1"/>
-<pinref part="LED3" gate="G$1" pin="A"/>
+<pinref part="SET_LED" gate="G$1" pin="A"/>
 <pinref part="J7" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="25.4" x2="35.56" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="27.94" x2="30.48" y2="27.94" width="0.1524" layer="91"/>
@@ -22931,7 +22931,7 @@ STAND-OFF</description>
 <net name="N$18" class="0">
 <segment>
 <pinref part="R14" gate="G$1" pin="1"/>
-<pinref part="LED4" gate="G$1" pin="A"/>
+<pinref part="TIM_LED" gate="G$1" pin="A"/>
 <pinref part="J11" gate="G$1" pin="1"/>
 <wire x1="71.12" y1="25.4" x2="71.12" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="27.94" x2="66.04" y2="27.94" width="0.1524" layer="91"/>
@@ -22940,7 +22940,7 @@ STAND-OFF</description>
 </net>
 <net name="N$19" class="0">
 <segment>
-<pinref part="LED4" gate="G$1" pin="C"/>
+<pinref part="TIM_LED" gate="G$1" pin="C"/>
 <pinref part="Q2" gate="G$1" pin="C"/>
 <pinref part="J11" gate="G$1" pin="2"/>
 <wire x1="66.04" y1="20.32" x2="71.12" y2="20.32" width="0.1524" layer="91"/>
@@ -22950,7 +22950,7 @@ STAND-OFF</description>
 </net>
 <net name="N$20" class="0">
 <segment>
-<pinref part="LED3" gate="G$1" pin="C"/>
+<pinref part="SET_LED" gate="G$1" pin="C"/>
 <pinref part="Q1" gate="G$1" pin="C"/>
 <wire x1="30.48" y1="20.32" x2="35.56" y2="20.32" width="0.1524" layer="91"/>
 <junction x="30.48" y="20.32"/>
@@ -23251,7 +23251,7 @@ STAND-OFF</description>
 </net>
 <net name="N$23" class="0">
 <segment>
-<pinref part="LED1" gate="G$1" pin="C"/>
+<pinref part="ALR_LED" gate="G$1" pin="C"/>
 <pinref part="Q3" gate="G$1" pin="C"/>
 <wire x1="109.22" y1="20.32" x2="115.316" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="115.316" y1="20.32" x2="115.316" y2="16.764" width="0.1524" layer="91"/>
@@ -23301,7 +23301,7 @@ STAND-OFF</description>
 <net name="N$36" class="0">
 <segment>
 <pinref part="R28" gate="G$1" pin="1"/>
-<pinref part="LED5" gate="G$1" pin="A"/>
+<pinref part="ON_LED" gate="G$1" pin="A"/>
 <pinref part="J12" gate="G$1" pin="1"/>
 <wire x1="231.648" y1="55.626" x2="231.648" y2="58.166" width="0.1524" layer="91"/>
 <wire x1="231.648" y1="58.166" x2="218.186" y2="58.166" width="0.1524" layer="91"/>

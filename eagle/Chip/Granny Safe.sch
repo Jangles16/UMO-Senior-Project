@@ -21972,7 +21972,6 @@ STAND-OFF</description>
 <part name="R4" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:26057/1" value="2.4k"/>
 <part name="R5" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:26057/1" value="2.4k"/>
 <part name="R6" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:26057/1" value="100"/>
-<part name="R7" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:26057/1" value="10k"/>
 <part name="R8" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:26057/1" value="20k"/>
 <part name="R9" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:26057/1" value="20k"/>
 <part name="R10" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:26057/1" value="15k"/>
@@ -22168,10 +22167,6 @@ STAND-OFF</description>
 <instance part="R6" gate="G$1" x="38.1" y="190.5" smashed="yes" rot="R90">
 <attribute name="NAME" x="39.37" y="191.9986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="39.37" y="189.738" size="1.778" layer="96"/>
-</instance>
-<instance part="R7" gate="G$1" x="71.12" y="170.18" smashed="yes" rot="R90">
-<attribute name="NAME" x="72.39" y="169.1386" size="1.778" layer="95"/>
-<attribute name="VALUE" x="72.39" y="166.878" size="1.778" layer="96"/>
 </instance>
 <instance part="R8" gate="G$1" x="71.12" y="187.96" smashed="yes" rot="R90">
 <attribute name="NAME" x="72.39" y="186.9186" size="1.778" layer="95"/>
@@ -22746,9 +22741,6 @@ STAND-OFF</description>
 <pinref part="R8" gate="G$1" pin="1"/>
 <wire x1="60.96" y1="180.34" x2="71.12" y2="180.34" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="180.34" x2="71.12" y2="182.88" width="0.1524" layer="91"/>
-<pinref part="R7" gate="G$1" pin="2"/>
-<wire x1="71.12" y1="180.34" x2="71.12" y2="175.26" width="0.1524" layer="91"/>
-<junction x="71.12" y="180.34"/>
 <pinref part="R17" gate="G$1" pin="1"/>
 <junction x="60.96" y="180.34"/>
 </segment>
@@ -22765,12 +22757,9 @@ STAND-OFF</description>
 <net name="N$26" class="0">
 <segment>
 <pinref part="R9" gate="G$1" pin="2"/>
-<pinref part="R7" gate="G$1" pin="1"/>
-<wire x1="71.12" y1="160.02" x2="71.12" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="C" pin="-IN"/>
 <wire x1="48.26" y1="152.4" x2="48.26" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="160.02" x2="60.96" y2="160.02" width="0.1524" layer="91"/>
-<junction x="71.12" y="160.02"/>
 <pinref part="VR1" gate="R?" pin="CCW"/>
 <wire x1="60.96" y1="160.02" x2="71.12" y2="160.02" width="0.1524" layer="91"/>
 <junction x="60.96" y="160.02"/>
