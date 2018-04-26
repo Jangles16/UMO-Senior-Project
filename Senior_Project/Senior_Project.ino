@@ -26,15 +26,15 @@
 #define ZERO_SENSE    2     //pin 4 on chip, used as external interrupt pin to capture zero crossing event
 #define GATE_PIN      3     //pin 5 on chip, used to control the triggering of the triac (pretty sure want PWM here, so chose PWM PIN)
 #define HOT_LED_PIN   4     //probably need to change pin (6 on chip currently)
-#define KP            2     // PID proportional factor
-#define KI            5    // PID integral factor
-#define KD            2    // PID derivative factor  
-#define ALR_DELAY     60000   //time in ms until alarm activates
-#define OFF_DELAY     10000    //hoow long the alarm sounds until turns off
+#define KP            40.0     // PID proportional factor
+#define KI            1    // PID integral factor
+#define KD            10.0    // PID derivative factor  
+#define ALR_DELAY     600000   //time in ms until alarm activates
+#define OFF_DELAY     60000    //hoow long the alarm sounds until turns off
 
 //used to convert adc reading into degree F                            
-#define TEMP_OFFSET   32.0    
-#define TEMP_SLOPE    .4545  //.4545454545
+#define TEMP_OFFSET   -470.0    
+#define TEMP_SLOPE    1.42  //.4545454545
 
 const byte ROWS = 4; // Four rows
 const byte COLS = 3; // Three columns
@@ -67,7 +67,7 @@ unsigned int print_cnt = 50000;                 //used to slow down writing to l
 int key_temp = 0;                       //key press counter
 boolean zero_state = false;             //flag to signal if we are in state where we care about zero-crossing (pid and hotplate control)
 //boolean on_state = false;             //if we are a state to care about alarms
-int windowsize = 498;                   //500 - 2, practically turns triac off (see ISRs below), if 500 get full wave again 
+int windowsize = 510;                   //500 - 2, practically turns triac off (see ISRs below), if 500 get full wave again 
 
 //define the PID using coeffiecients above, comparing the hotplate temperature to setpoint
 //PID out will influence a time delay and reverse mode is need to get proper operation
@@ -243,9 +243,9 @@ void zero_crossing() {
 }
 
 ISR(TIMER1_COMPA_vect){                 //comparator match interrupt
-  if (zero_state) {                     //zero sense is enable
+  if (zero_state && OCR1A < windowsize) {                     //zero sense is enable
     digitalWrite(GATE_PIN, HIGH);       //set TRIAC gate to high
-    TCNT1 = 65536 + (-498 + OCR1A);      //trigger pulse width, will be full half wave - delay
+    TCNT1 = 65536 + (-(windowsize+2) + OCR1A);      //trigger pulse width, will be full half wave - delay
   }                                     //bigger than 500 and starts skipping some half waves
                                         //given the rise/fall of zero-cross, 500 ~ half wave
 }
